@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PVL Transports</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-list li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-list li a:hover {
+            color: #f4f4f4;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .rightnav {
+            display: flex;
+            align-items: center;
+        }
+
+        #search {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #ff4500;
+        }
+
+        .hero-section {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .services-section, .about-section, .contact-section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .service {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            width: 30%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .contact-info, .contact-form {
+            width: 45%;
+            text-align: left;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #ff4500;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="Main logo.png" alt="PVL Transports Logo">
+        </div>
+        <ul class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="rightnav">
+            <input type="text" name="search" id="search" placeholder="Search...">
+            <button class="btn">Search</button>
+        </div>
+    </nav>
+
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <h1>Welcome to PVL Transports</h1>
+            <p>Your trusted partner for reliable lorry transport services</p>
+            <button class="btn">Book a Lorry</button>
+        </div>
+    </section>
+
+    <section class="services-section" id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Heavy Cargo Transport</h3>
+                <p>Efficient and secure transport of heavy cargo across the country.</p>
+            </div>
+            <div class="service">
+                <h3>Logistics Solutions</h3>
+                <p>Comprehensive logistics services tailored to meet your business needs.</p>
+            </div>
+            <div class="service">
+                <h3>On-time Delivery</h3>
+                <p>We ensure timely and safe delivery of all shipments, big or small.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <h2>About Us</h2>
+        <p>PVL Transports has been a leader in the transport industry for over a decade. We specialize in providing reliable and secure lorry transport services across the country.</p>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Book a lorry</h3>
+                <p><strong>Phone:</strong> 9999999000</p>
+                <p><strong>Email:</strong> Mani@pvltransports.com</p>
+                <p><strong>Address:</strong> DWARAKA NAGAR, Visakhapatnam, Andhra Pradesh.</p>
+            </div>
+            <div class="contact-form">
+                <form action="#">
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 PVL Transports - All Rights Reserved</p>
+    </footer>
+</body>
+</html>
